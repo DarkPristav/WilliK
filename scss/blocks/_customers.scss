@@ -1,0 +1,61 @@
+.customers {
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(557px, 1fr));
+        gap: 26px;
+        
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    &__item {
+        border-radius: $radius-photo;
+        background: $color-dark2;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        
+        @include mobile {
+            align-items: center;
+        }
+    }
+    
+    &__desc {
+        @include text ($font, 400, 18px, 28.8px, $color-white);
+        @include mobile {
+            text-align: center;
+        }
+    }
+    
+    &__member {
+        display: flex;
+        gap: 20px;
+
+        img {
+            max-width: 71px;
+            max-height: 71px;
+            border-radius: 50%;
+        }
+    }
+    
+}
+
+
+
+.info {
+    &__name {
+        @include text ($font, 500, 18px, 28.8px, $color-white);
+        margin: 0;
+    }
+    
+    &__work {
+        @include text ($font, 400, 18px, 28.8px, $color-primary);
+        margin: 0;
+    }
+}
+

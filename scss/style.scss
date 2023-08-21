@@ -1,0 +1,63 @@
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'base';
+@import 'blocks/header';
+@import 'blocks/main-screen';
+@import 'blocks/services';
+@import 'blocks/portfolio';
+@import 'blocks/customers';
+@import 'blocks/price';
+@import 'blocks/touch';
+@import 'blocks/footer';
+
+
+ .btn {
+     @include text ($font, 500, 16px, 19px, $color-white);
+     background-color: $color-primary;
+     display: inline-block;
+     padding: 13px 18px;
+     border-radius: $radius-btn;
+     border: 0;
+     cursor: pointer;
+     outline: 0;
+     transition: $transition;
+     
+     &:hover {
+        background-color: darken($color-primary, 10%);
+        color: darken($color-white, 10%);
+     }
+
+ }
+
+
+.title {
+    @include text ($font, 700, 44px, 52px, $color-white);
+    span {
+            color: $color-primary;
+        }
+    margin-bottom: 17px;
+
+    @include mobile {
+        text-align: center;
+    }
+}
+
+.desc {
+    @include text ($font, 400, 16px, 25.6px, $color-body);
+    margin-bottom: 40px;
+    max-width: 460px;
+    width: 100%;
+
+    @include mobile {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+

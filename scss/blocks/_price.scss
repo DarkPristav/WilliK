@@ -1,0 +1,87 @@
+.price {
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        gap: 26px;
+        @include mobile {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+    
+    &__item {
+        border-radius: $radius-item;
+        background: $color-dark2;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        max-width: 360px;
+        width: 100%;
+        @include mobile {
+            align-items: center;
+        }
+    }
+}
+
+
+
+.value {
+    @include mobile {
+            text-align: center;
+        }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    
+    &__title {
+        @include text ($font, 500, 16px, 19px, $color-white);
+        text-transform: uppercase;
+        margin: 0;
+    }
+    
+    &__price {
+        @include text ($font, 500, 44px, 52px, $color-white);
+        text-transform: uppercase;
+        margin: 0;
+    }
+    
+    &__desc {
+        @include text ($font, 400, 14px, 22.4px, $color-body);
+       
+    }
+    
+    &__btn {
+        border-radius: $radius-btn;
+        border: 1px solid $color-primary;
+        background: $color-dark2;
+        padding: 18px 13px;
+        display: inline-block;
+        cursor: pointer;
+        max-width: 126px;
+        transition: $transition;
+        @include text ($font, 500, 16px, 19px, $color-white);
+
+        &._active, &:hover {
+                background-color: darken($color-primary, 10%);
+                color: darken($color-white, 10%);
+            }
+    }
+    
+    &__list {
+        gap: 21px;
+    }
+    
+    &__li {
+        @include text ($font, 400, 16px, 19px, $color-grey);
+        list-style: url('/img/tick.svg'); 
+        padding: 10px;  
+    }
+}
+

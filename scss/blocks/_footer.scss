@@ -1,0 +1,65 @@
+.footer {
+    background: $color-dark2;
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        padding: 53px 150px;
+        @include desktop-small {
+            
+            padding: 25px 50px;
+        }
+        @include tablet {
+
+            padding: 0 10px;
+        }
+
+        @include tablet {
+            align-items: center;
+            flex-direction: column-reverse;
+        }
+
+    }
+    
+    &__year {
+        @include text ($font, 400, 16px, 19px, $color-white);
+        a {
+            color: $color-primary;
+            transition: $transition;
+            cursor: pointer;
+            &:hover {
+                color: darken($color-primary, 10%);
+            }
+
+            
+        }
+        @include desktop-small {
+            text-align: center;
+        }
+
+    }
+    
+    &__nav {
+        display: flex;
+        gap: 34px;
+        @include tablet {
+        
+            gap: 15px;
+        }
+        @include mobile {
+            align-items: center;
+        
+            flex-direction: column;
+        }
+    }
+    
+    &__social {
+        @include text ($font, 400, 16px, 19px, $color-white);
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+}
+

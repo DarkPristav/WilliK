@@ -1,0 +1,69 @@
+.touch {
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+    &__reverse {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    &__name {
+        border-radius: $radius-touch;
+        border: 1px solid $color-white-alfa;
+        
+    }
+    
+    &__email {
+        border-radius: $radius-touch;
+        border: 1px solid $color-white-alfa;
+    }
+    
+    &__desc {
+        border-radius: $radius-touch;
+        border: 1px solid $color-white-alfa;
+    }
+    
+    &__btn {
+        max-width: 147px;
+    }
+}
+
+
+
+
+
+
+.input {
+
+    &__name {
+        margin: 14px 16px;
+        background-color: $color-dark1;
+        border-width: 0;
+        border-color: $color-dark1;
+        @include text ($font, 400, 14px, 17px, $color-body);
+    }
+    
+    
+    
+    &__email {
+        margin: 14px 16px;
+        background-color: $color-dark1;
+        border-width: 0;
+        border-color: $color-dark1;
+        @include text ($font, 400, 14px, 17px, $color-body);
+    }
+    
+    
+    
+    &__desc {
+        margin-top: 14px;
+        margin-left: 16px;
+        margin-bottom: 89px;
+        background-color: $color-dark1;
+        border-width: 0;
+        border-color: $color-dark1;
+        @include text ($font, 400, 14px, 17px, $color-body);
+    }
+}

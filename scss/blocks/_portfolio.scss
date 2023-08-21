@@ -1,0 +1,61 @@
+.portfolio {
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 26px;
+        
+        @include mobile {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+
+    &__photo {
+        &__search {
+            display: none;
+        }
+        position: relative;
+        transition: $transition;
+        &._active, &:hover{
+            .portfolio__search {
+                position: absolute;
+                display: block;
+                background-color: $color-primary;
+                border-radius: 50%;
+                height: 76px;
+                width: 76px;
+                bottom: 94px;
+                left: 144px;
+            }
+            #icon-search {
+                display: block;
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+            }
+            
+           
+        }
+    }
+
+    &__img {
+        border-radius: $radius-photo;
+        max-width: 363px;
+        width: 100%;
+        
+        
+    }
+
+
+}
+
+#icon-search {
+    display: none;
+    z-index: 0;
+
+}
+
+
